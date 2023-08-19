@@ -1,0 +1,35 @@
+with the arduino program loaded, let's use this one to perform bidirectional communication,
+make sure to close the arduino ide program or any program that is using the serial comic method with the arduino
+
+
+(Importing Libraries):
+serial: Library for serial communication between the computer and the Arduino device.
+serial.tools.list_ports: Provides functions to list the serial ports available on the computer.
+threading: Library to support concurrent programming using threads.
+time: Library for handling time.
+
+(SharedState Class):
+A class that represents a state shared between threads. It has a lock to guarantee
+safe synchronization between threads and a state variable that can be shared.
+
+(Function send_serial_data):
+Sends encoded data to the specified serial port.
+
+(Function read_data_serial):
+Reads and decodes a line of data from the serial port.
+
+(Function receive_data_from_arduino):
+Runs on a thread to continuously receive data from the Arduino. If data is available, it is printed to the screen.
+
+(Function find_device_port):
+Searches for and finds a serial port associated with the device that operates at the specified baud rate.
+
+(main_loop function):
+The main function that creates a serial connection to the device, starts a thread to receive data from the Arduino, and then
+starts a loop to send and receive data between the computer and the Arduino.
+
+(main function):
+The function that sets the operating frequency of the microcontroller and starts the execution of the main program.
+
+(Main Execution):
+Checks if the script is running as the main program and calls the main() function to start the Arduino communication program.
