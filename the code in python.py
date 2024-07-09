@@ -57,7 +57,7 @@ def main_loop(device_port, target_baudrate):
         shared_state = SharedState()
 
         # Thread to receive data from Arduino
-        receive_thread = threading.Thread(target=receive_data_from_arduino, args=(shared_state, ser))
+        receive_thread = threading.Thread(target=receivedata_from_arduino, args=(shared_state, ser))
         receive_thread.daemon = True  # Thread will be terminated when the main program ends
         receive_thread.start()
 
